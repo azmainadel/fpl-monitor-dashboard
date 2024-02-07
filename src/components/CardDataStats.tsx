@@ -1,42 +1,45 @@
 import React, { ReactNode } from "react";
 
 interface CardDataStatsProps {
-  title: string;
-  total: string;
-  rate: string;
+  category: string;
+  team: string;
+  manager: string;
+  change: string;
   levelUp?: boolean;
   levelDown?: boolean;
-  children: ReactNode;
+  positiveStat?: boolean;
+  negativeStat?: boolean;
 }
 
 const CardDataStats: React.FC<CardDataStatsProps> = ({
-  title,
-  total,
-  rate,
+  category,
+  team,
+  manager,
+  change,
   levelUp,
   levelDown,
-  children,
+  positiveStat,
+  negativeStat,
 }) => {
   return (
     <div className="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
-      <div className="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2 dark:bg-meta-4">
-        {children}
-      </div>
-
-      <div className="mt-4 flex items-end justify-between">
+      <div className="mt-1 flex items-end justify-between">
         <div>
+          <span className="text-sm font-bold text-primary">{category}</span>
           <h4 className="text-title-md font-bold text-black dark:text-white">
-            {total}
+            {team}
           </h4>
-          <span className="text-sm font-medium">{title}</span>
+          <h3 className="text-black dark:text-white">
+            {manager}
+          </h3>
         </div>
 
         <span
-          className={`flex items-center gap-1 text-sm font-medium ${
-            levelUp && "text-meta-3"
-          } ${levelDown && "text-meta-5"} `}
+          className={`flex items-center gap-1 font-medium
+          ${ levelUp && "text-meta-3"} ${levelDown && "text-meta-1"}
+          ${positiveStat && "text-meta-3"} ${negativeStat && "text-meta-1"}`}
         >
-          {rate}
+          {change}
 
           {levelUp && (
             <svg
@@ -55,7 +58,7 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
           )}
           {levelDown && (
             <svg
-              className="fill-meta-5"
+              className="fill-meta-1"
               width="10"
               height="11"
               viewBox="0 0 10 11"

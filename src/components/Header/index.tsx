@@ -64,8 +64,11 @@ const Header = (props: {
           </Link>
         </div>
 
-        <div className="hidden sm:block">
-        </div>
+        <div>
+          <h4 className="text-xl font-bold text-black dark:text-white">
+            Noibeddo FPL: GW5
+          </h4>
+        </div>        
 
         <div className="flex items-center gap-3 2xsm:gap-7">
           <ul className="flex items-center gap-2 2xsm:gap-4">

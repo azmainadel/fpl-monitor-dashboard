@@ -100,9 +100,18 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       </div>
       {/* <!-- SIDEBAR HEADER --> */}
 
+      <div className="flex-col justify-between gap-2 px-8">
+        <h5 className=" text-black dark:text-white">
+          Total Players: 46
+        </h5>
+        <h5 className=" text-black dark:text-white">
+          Global Rank: 1934
+        </h5>
+      </div>
+
       <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
         {/* <!-- Sidebar Menu --> */}
-        <nav className="mt-5 px-4 py-4 lg:mt-9 lg:px-6">
+        <nav className="mt-2 px-4 py-4 lg:mt-3 lg:px-6">
           {/* <!-- Menu Group --> */}
           <div>
             <ul className="mb-6 flex flex-col gap-1.5">
