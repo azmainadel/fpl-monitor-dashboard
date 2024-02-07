@@ -101,12 +101,16 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       {/* <!-- SIDEBAR HEADER --> */}
 
       <div className="flex-col justify-between gap-2 px-8">
-        <h5 className=" text-black dark:text-white">
+        <h4 className="text-xl font-semibold text-white dark:text-white">
+          Noibeddo FPL: GW5
+        </h4>
+        <h5 className="mt-2 text-white dark:text-white">
           Total Players: 46
         </h5>
-        <h5 className=" text-black dark:text-white">
+        <h5 className=" text-white dark:text-white">
           Global Rank: 1934
         </h5>
+        <hr className="mt-6"/>
       </div>
 
       <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">

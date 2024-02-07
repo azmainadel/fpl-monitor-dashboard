@@ -65,7 +65,7 @@ const Header = (props: {
         </div>
 
         <div>
-          <h4 className="text-xl font-bold text-black dark:text-white">
+          <h4 className="text-xl font-semibold text-black dark:text-white lg:hidden">
             Noibeddo FPL: GW5
           </h4>
         </div>        

@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
-interface CardDataStatsProps {
+interface InfoCardsProps {
   category: string;
   team: string;
   manager: string;
@@ -11,7 +11,7 @@ interface CardDataStatsProps {
   negativeStat?: boolean;
 }
 
-const CardDataStats: React.FC<CardDataStatsProps> = ({
+const InfoCards: React.FC<InfoCardsProps> = ({
   category,
   team,
   manager,
@@ -25,7 +25,9 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
     <div className="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
       <div className="mt-1 flex items-end justify-between">
         <div>
-          <span className="text-sm font-bold text-primary">{category}</span>
+          <h4 className="font-medium text-primary dark:text-secondary">
+            {category}
+          </h4>
           <h4 className="text-title-md font-bold text-black dark:text-white">
             {team}
           </h4>
@@ -77,4 +79,4 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
   );
 };
 
-export default CardDataStats;
+export default InfoCards;

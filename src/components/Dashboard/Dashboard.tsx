@@ -1,30 +1,39 @@
 "use client";
 import React from "react";
 import ChartOne from "../Charts/ChartOne";
-import ChartThree from "../Charts/ChartThree";
+import CaptaincyChart from "../Charts/ChartThree";
 import ChartTwo from "../Charts/ChartTwo";
 import ChatCard from "../Chat/ChatCard";
-import TableOne from "../Tables/TableOne";
-import CardDataStats from "../CardDataStats";
-import MapOne from "../Maps/MapOne";
+import LeagueShortTable from "../Tables/LeagueShortTable";
+import InfoCards from "../CardDataStats";
 
 const Dashboard: React.FC = () => {
   return (
     <>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
-        <CardDataStats category="Most Points" team="Shera Team" manager="Sadik Ahammed" change="129" positiveStat/>
-        <CardDataStats category="Lowest Points" team="xD Team" manager="Rupak Ahsan" change="-14" negativeStat/>
-        <CardDataStats category="Most Rank Gain" team="Shit Team" manager="Azmain Adel" change="420" levelUp/>
-        <CardDataStats category="Most Rank Loss" team="Baaje Team" manager="Saad Al Muttakee"  change="69" levelDown/>
+        <InfoCards category="'Kora' Team" team="Turk Whiskey" manager="Kink Das" change="129 pts" positiveStat/>
+        <InfoCards category="Loser Team" team="xyntherys" manager="Azmain Adel" change="-14 pts" negativeStat/>
+        <InfoCards category="Best Gorom Bench" team="Vigilante XI" manager="Rupak Ahsan" change="32 pts" negativeStat/>
+        <InfoCards category="Eliminated" team="xyntherys...again :(" manager="Azmain Adel" change="KO" negativeStat/>
       </div>
 
       <div className="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-7.5 2xl:gap-7.5">
-        <ChartOne />
+        {/* <ChartOne /> */}
         <ChartTwo />
-        <ChartThree />
-        <MapOne />
+        <CaptaincyChart />
+        <ChartTwo />
+      </div>
+
+      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:mt-7.5 2xl:gap-7.5">
+        <InfoCards category="One GW Wonder" team="Arsenal #1" manager="Sadik Ahammed Siddique" change="420" levelUp/>
+        <InfoCards category="Jibon Tai Loss" team="Dabi Janai" manager="MD Shihab Sharker"  change="69" levelDown/>
+        <InfoCards category="Deshi Hero" team="Xine" manager="Abdullah Tamim" change="#1" positiveStat/>
+        <InfoCards category="Bhindeshi Hero" team="supernooba" manager="Sadman Sadeed Omee"  change="#6" positiveStat/>
+      </div>
+
+      <div className="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-7.5 2xl:gap-7.5">
         <div className="col-span-12 xl:col-span-8">
-          <TableOne />
+          <LeagueShortTable />
         </div>
         <ChatCard />
       </div>
