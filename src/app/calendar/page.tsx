@@ -1,6 +1,6 @@
 import Calendar from "@/components/Calender";
 import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import { metadata as m } from "@/meta/metadata";
 
 export const metadata: Metadata = m;
