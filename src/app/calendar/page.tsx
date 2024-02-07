@@ -1,12 +1,9 @@
 import Calendar from "@/components/Calender";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import { metadata as m } from "@/meta/metadata";
 
-export const metadata: Metadata = {
-  title: "FPL Monitor Dashboard",
-  description:
-    "FPL dashboard for monitoring a classic league stats",
-};
+export const metadata: Metadata = m;
 
 const CalendarPage = () => {
   return (
