@@ -5,7 +5,7 @@ import CaptaincyChart from "../Charts/ChartThree";
 import ChartTwo from "../Charts/ChartTwo";
 import ChatCard from "../Chat/ChatCard";
 import LeagueShortTable from "../Tables/LeagueShortTable";
-import InfoCards from "../CardDataStats";
+import InfoCards from "../Card/CardDataStats";
 
 const Dashboard: React.FC = () => {
   return (
